@@ -1,6 +1,6 @@
 # AI-Assisted Agent Generation Template
 
-Use this template to generate agents using Claude with the agent creation system prompt.
+Use this template to generate agents using Copilot with the agent creation system prompt.
 
 ## Usage Pattern
 
@@ -24,7 +24,7 @@ Return ONLY the JSON object, no other text.
 
 **Replace [YOUR DESCRIPTION] with your agent requirements.**
 
-### Step 3: Claude Returns JSON
+### Step 3: Copilot Returns JSON
 
 Copilot will return:
 
@@ -148,7 +148,7 @@ Build an agent that writes and updates API documentation. It should analyze code
 
 ### Include Triggering Preferences
 
-Tell Claude when the agent should activate:
+Tell Copilot when the agent should activate:
 
 ```
 "Create an agent that generates tests. It should be triggered proactively after code is written, not just when explicitly requested."
@@ -194,7 +194,7 @@ If generated agent needs improvement:
 
 ## Advantages of AI-Assisted Generation
 
-- **Comprehensive**: Claude includes edge cases and quality checks
+- **Comprehensive**: Copilot includes edge cases and quality checks
 - **Consistent**: Follows proven patterns
 - **Fast**: Seconds vs manual writing
 - **Examples**: Auto-generates triggering examples

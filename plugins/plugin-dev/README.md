@@ -4,16 +4,15 @@ A comprehensive toolkit for developing Copilot CLI plugins with expert guidance 
 
 ## Overview
 
-The plugin-dev toolkit provides eight specialized skills to help you build high-quality Copilot CLI plugins:
+The plugin-dev toolkit provides seven specialized skills to help you build high-quality Copilot CLI plugins:
 
 1. **Hook Development** - Advanced hooks API and event-driven automation
 2. **MCP Integration** - Model Context Protocol server integration
 3. **Plugin Structure** - Plugin organization and directory layout
 4. **Plugin Settings** - Configuration patterns using .github/plugin-name.local.md files
-5. **Skill & Agent Development** - Creating skills, agents (.agent.md), and extensions
-6. **Agent Development** - Creating autonomous agents with AI-assisted generation
-7. **Skill Development** - Creating skills with progressive disclosure and strong triggers
-8. **Create Plugin** - Guided workflow for end-to-end plugin creation
+5. **Agent Development** - Creating autonomous agents with AI-assisted generation
+6. **Skill Development** - Creating skills with progressive disclosure and strong triggers
+7. **Create Plugin** - Guided workflow for end-to-end plugin creation
 
 Each skill follows best practices with progressive disclosure: lean core documentation, detailed references, working examples, and utility scripts.
 
@@ -131,27 +130,7 @@ Use this workflow for structured, high-quality plugin development from concept t
 
 **Use when:** Making plugins configurable, storing per-project state, or implementing user preferences.
 
-### 5. Skill & Agent Development
-
-**Trigger phrases:** "create a skill", "add an agent", "skill frontmatter", "define agent arguments", "organize skills and agents"
-
-**What it covers:**
-- Skill structure and markdown format
-- Agent files with .agent.md extension
-- YAML frontmatter fields (description, allowed-tools)
-- Dynamic arguments and file references
-- Bash execution for context
-- Skill and agent organization and namespacing
-- Best practices for component development
-
-**Resources:**
-- Core SKILL.md (1,535 words)
-- Examples and reference documentation
-- Skill and agent organization patterns
-
-**Use when:** Creating skills, defining agent files (.agent.md), or organizing plugin components.
-
-### 6. Agent Development
+### 5. Agent Development
 
 **Trigger phrases:** "create an agent", "add an agent", "write a subagent", "agent frontmatter", "when to use description", "agent examples", "autonomous agent", ".agent.md"
 
@@ -172,7 +151,7 @@ Use this workflow for structured, high-quality plugin development from concept t
 
 **Use when:** Creating autonomous agents, defining agent behavior, or implementing AI-assisted agent generation.
 
-### 7. Skill Development
+### 6. Skill Development
 
 **Trigger phrases:** "create a skill", "add a skill to plugin", "write a new skill", "improve skill description", "organize skill content"
 
@@ -186,12 +165,19 @@ Use this workflow for structured, high-quality plugin development from concept t
 - Based on skill-creator methodology adapted for Copilot CLI plugins
 
 **Resources:**
-- Core SKILL.md (1,232 words)
-- References: skill-creator methodology, plugin-dev patterns
-- Examples: Study plugin-dev's own skills as templates
+- Core SKILL.md (~22K words, comprehensive methodology)
+- 8 reference docs: frontmatter, plugin-features, advanced-workflows, testing, documentation, marketplace, interactive-commands
+- 2 example collections: simple skills (10 examples), plugin skills (10 examples)
 
 **Use when:** Creating new skills for plugins or improving existing skill quality.
 
+### 7. Create Plugin
+
+**Trigger phrases:** "create a new plugin", "create a plugin for...", "build a plugin", "start a new plugin project"
+
+**What it covers:** End-to-end guided workflow for creating plugins from scratch with an 8-phase process (Discovery → Component Planning → Design → Structure → Implementation → Validation → Testing → Documentation).
+
+**Use when:** Starting a new plugin project from concept to completion.
 
 ## Installation
 
@@ -286,7 +272,7 @@ Every skill provides working examples:
 - **MCP Integration**: 3 server configurations (stdio, SSE, HTTP)
 - **Plugin Structure**: 3 plugin layouts (minimal, standard, advanced)
 - **Plugin Settings**: 3 examples (read-settings hook, create-settings command, templates)
-- **Command Development**: 10 complete skill and agent examples (review, test, deploy, docs, etc.)
+- **Skill Development**: 10 complete skill and agent examples (review, test, deploy, docs, etc.)
 
 ## Documentation Standards
 
@@ -299,7 +285,7 @@ All skills follow consistent standards:
 
 ## Total Content
 
-- **Core Skills**: ~11,065 words across 8 SKILL.md files
+- **Core Skills**: ~9,500 words across 7 SKILL.md files
 - **Reference Docs**: ~10,000+ words of detailed guides
 - **Examples**: 12+ working examples (hook scripts, MCP configs, plugin layouts, settings files)
 - **Utilities**: 6 production-ready validation/testing/parsing scripts
@@ -382,7 +368,7 @@ This plugin is part of the Copilot CLI plugin ecosystem. To contribute improveme
 
 ## Version
 
-0.1.0 - Initial release with eight comprehensive skills and three validation agents
+0.1.0 - Initial release with seven comprehensive skills and three validation agents
 
 ## Author
 

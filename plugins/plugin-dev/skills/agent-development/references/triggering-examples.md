@@ -14,7 +14,7 @@ assistant: "[How Copilot should respond before triggering]"
 <commentary>
 [Explanation of why this agent should be triggered in this scenario]
 </commentary>
-assistant: "[How Claude triggers the agent - usually 'I'll use the [agent-name] agent...']"
+assistant: "[How Copilot triggers the agent - usually 'I'll use the [agent-name] agent...']"
 </example>
 ```
 
@@ -60,7 +60,7 @@ Example 3: user: "Look over my changes"
 
 ### Assistant Response (Before Triggering)
 
-**Purpose:** Show what Claude says before launching the agent
+**Purpose:** Show what Copilot says before launching the agent
 
 **Good responses:**
 ```

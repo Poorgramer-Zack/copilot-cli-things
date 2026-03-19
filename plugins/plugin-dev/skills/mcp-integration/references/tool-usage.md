@@ -125,10 +125,7 @@ Agents can use MCP tools autonomously without pre-allowing them:
 
 ```markdown
 ---
-name: asana-status-updater
 description: This agent should be used when the user asks to "update Asana status", "generate project report", or "sync Asana tasks"
-model: inherit
-color: blue
 ---
 
 ## Role

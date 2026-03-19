@@ -608,7 +608,6 @@ Plugin-dev's skills demonstrate best practices:
 - `../agent-development/` - AI-assisted creation, references
 - `../mcp-integration/` - Comprehensive references
 - `../plugin-settings/` - Real-world examples
-- `../command-development/` - Skill & agent development guide
 - `../plugin-structure/` - Good organization
 
 ### Reference Files
