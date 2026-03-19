@@ -1,0 +1,11 @@
+{
+  "name": "copilot-cli-things",
+  "owner": {
+    "name": "Poorgramer-Zack"
+  },
+  "metadata": {
+    "description": "A curated collection of Copilot CLI plugins and extensions",
+    "version": "1.0.0"
+  },
+  "plugins": []
+}
