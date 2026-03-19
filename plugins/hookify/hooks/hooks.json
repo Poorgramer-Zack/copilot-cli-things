@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "hooks": [
+    {
+      "event": "preToolUse",
+      "command": "python3 hooks/pretooluse.py",
+      "timeout": 10000
+    },
+    {
+      "event": "postToolUse",
+      "command": "python3 hooks/posttooluse.py",
+      "timeout": 10000
+    },
+    {
+      "event": "agentStop",
+      "command": "python3 hooks/agentstop.py",
+      "timeout": 10000
+    },
+    {
+      "event": "userPromptSubmitted",
+      "command": "python3 hooks/userpromptsubmitted.py",
+      "timeout": 10000
+    }
+  ]
+}
