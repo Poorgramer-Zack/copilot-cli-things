@@ -169,7 +169,6 @@ async function onSessionStart() {
   const phase = config.defaultPhase;
   currentPhase = phase;
   await session.setModel(getModelForPhase(phase));
-  session.log(`Phase Router loaded. Default: ${PHASE_EMOJI[phase]} ${phase} → ${getModelForPhase(phase)}`);
 }
 
 async function onUserPromptSubmitted(input) {
@@ -204,8 +203,9 @@ if (!currentPhase) {
 }
 const initModel = getModelForPhase(currentPhase);
 await session.setModel(initModel);
-session.log(`Phase Router: ${PHASE_EMOJI[currentPhase]} ${currentPhase} → ${initModel}`);
 
 session.on("session.model_change", (event) => {
-  session.log(`Phase Router: Model changed → ${event.data?.newModel || "unknown"}`);
+  const model = event.data?.newModel || "unknown";
+  const phase = currentPhase || config.defaultPhase;
+  session.log(`Phase Router: ${PHASE_EMOJI[phase]} ${phase} → ${model}`);
 });
