@@ -1,13 +1,11 @@
 ---
-description: This skill should be used when the user asks to "create a plugin", "scaffold a plugin", "understand plugin structure", "organize plugin components", "add skills/agents/hooks", "configure auto-discovery", or needs guidance on plugin directory layout, component organization, file naming conventions, or Copilot CLI plugin architecture best practices.
+description: Copilot CLI plugin directory layout, component organization, and auto-discovery. Covers skills, agents, hooks, MCP servers, file naming conventions, path references, and plugin architecture patterns. Use for scaffolding plugins, understanding structure, or adding components.
 version: 0.1.0
 ---
 
 # Plugin Structure for Copilot CLI
 
-## Overview
-
-Copilot CLI plugins follow a directory-based convention with automatic component discovery. No manifest file is required. Understanding this structure enables creating well-organized, maintainable plugins that integrate seamlessly with Copilot CLI.
+Copilot CLI plugins follow a directory-based convention with automatic component discovery. No manifest file is required — understanding this structure enables creating well-organized, maintainable plugins.
 
 **Key concepts:**
 - Convention-based directory layout for automatic discovery

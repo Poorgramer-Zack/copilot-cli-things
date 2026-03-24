@@ -1,6 +1,6 @@
 ---
 name: Create Extension
-description: This skill should be used when the user asks to "create an extension", "build an extension", "add a Copilot CLI extension", "write an extension.mjs", "make a custom tool", "add hooks via extension", or needs guidance on Copilot CLI extension development, lifecycle, SDK API, tools, hooks, or events.
+description: "Copilot CLI extension development: extension.mjs, hooks, tools, events, SDK API, JSON-RPC. Use when creating, building, debugging, or inspecting extensions, or asking about lifecycle, permissions, onPermissionRequest, joinSession, or session events."
 version: 0.1.0
 ---
 

@@ -1,16 +1,13 @@
 ---
 name: MCP Integration
-description: This skill should be used when the user asks to "add MCP server", "integrate MCP", "configure MCP in plugin", "use mcp-config.json", "set up Model Context Protocol", "connect external service", or discusses MCP server types (SSE, stdio, HTTP, WebSocket). Provides comprehensive guidance for integrating Model Context Protocol servers into Copilot CLI plugins for external tool and service integration.
+description: MCP server integration for Copilot CLI plugins: mcp-config.json, stdio/SSE/HTTP/WebSocket servers, OAuth, tool naming. Use when adding external service connections, configuring MCP, or debugging MCP tools.
 version: 0.1.0
 ---
 
 # MCP Integration for Copilot CLI Plugins
 
-## Overview
+Integrate external services and APIs into Copilot CLI plugins via MCP servers. Expose external capabilities as tools within Copilot CLI.
 
-Model Context Protocol (MCP) enables Copilot CLI plugins to integrate with external services and APIs by providing structured tool access. Use MCP integration to expose external service capabilities as tools within Copilot CLI.
-
-**Key capabilities:**
 - Connect to external services (databases, APIs, file systems)
 - Provide 10+ related tools from a single service
 - Handle OAuth and complex authentication flows

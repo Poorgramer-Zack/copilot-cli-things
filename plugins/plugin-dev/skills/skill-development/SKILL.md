@@ -1,19 +1,16 @@
 ---
 name: Skill Development
-description: This skill should be used when the user wants to "create a skill", "add a skill to plugin", "write a new skill", "improve skill description", "organize skill content", or needs guidance on skill structure, progressive disclosure, or skill development best practices for Copilot CLI plugins.
+description: Copilot CLI skill creation and authoring. Covers SKILL.md structure, YAML frontmatter, description writing, progressive disclosure, bundled resources (scripts/references/assets), imperative writing style, validation, and iteration. Use for creating, improving, or organizing plugin skills.
 version: 0.1.0
 ---
 
 # Skill Development for Copilot CLI Plugins
 
-This skill provides guidance for creating effective skills for Copilot CLI plugins.
+Create effective skills for Copilot CLI plugins following best practices for structure, progressive disclosure, and trigger matching.
 
 ## About Skills
 
-Skills are modular, self-contained packages that extend Copilot's capabilities by providing
-specialized knowledge, workflows, and tools. Think of them as "onboarding guides" for specific
-domains or tasks—they transform Copilot from a general-purpose agent into a specialized agent
-equipped with procedural knowledge that no model can fully possess.
+Skills are modular, self-contained packages that extend Copilot's capabilities with specialized knowledge, workflows, and tools — "onboarding guides" that transform Copilot from a general-purpose agent into a domain-specialized agent with procedural knowledge no model fully possesses.
 
 ### What Skills Provide
 

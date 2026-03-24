@@ -1,14 +1,12 @@
 ---
 name: Writing Hookify Rules
-description: This skill should be used when the user asks to "create a hookify rule", "write a hook rule", "configure hookify", "add a hookify rule", or needs guidance on hookify rule syntax and patterns.
+description: Hookify rule authoring reference — YAML frontmatter format, regex patterns, event types (bash/file/stop/prompt), conditions, operators. Triggers on "create a hookify rule", "write a hook rule", "add a hookify rule", "hookify rule syntax", rule pattern guidance.
 version: 0.1.0
 ---
 
 # Writing Hookify Rules
 
-## Overview
-
-Hookify rules are markdown files with YAML frontmatter that define patterns to watch for and messages to show when those patterns match. Rules are stored in `.github/hookify.{rule-name}.local.md` files.
+Define hookify rules as `.github/hookify.{rule-name}.local.md` files — markdown with YAML frontmatter specifying patterns to watch for and messages to display on match.
 
 ## Rule File Format
 

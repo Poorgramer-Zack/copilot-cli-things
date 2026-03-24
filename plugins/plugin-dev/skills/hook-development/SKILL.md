@@ -1,16 +1,13 @@
 ---
 name: Hook Development
-description: This skill should be used when the user asks to "create a hook", "add a preToolUse/postToolUse/agentStop hook", "validate tool use", "implement command hooks", "set up event-driven automation", "block dangerous commands", or mentions hook events (preToolUse, postToolUse, agentStop, subagentStop, sessionStart, sessionEnd, userPromptSubmitted). Provides comprehensive guidance for creating and implementing Copilot CLI plugin hooks with focus on command-based hooks.
+description: Hook development for Copilot CLI plugins: hooks.json, preToolUse/postToolUse/agentStop/sessionStart hooks, command hooks, event-driven validation, tool blocking, policy enforcement. Use when creating or debugging plugin hooks.
 version: 0.1.0
 ---
 
 # Hook Development for Copilot CLI Plugins
 
-## Overview
+Create event-driven hooks that validate operations, enforce policies, add context, and integrate external tools into Copilot CLI workflows.
 
-Hooks are event-driven automation scripts that execute in response to Copilot CLI events. Use hooks to validate operations, enforce policies, add context, and integrate external tools into workflows.
-
-**Key capabilities:**
 - Validate tool calls before execution (preToolUse)
 - React to tool results (postToolUse)
 - Enforce completion standards (agentStop, subagentStop)

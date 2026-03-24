@@ -1,6 +1,6 @@
 ---
 name: Hookify Configure
-description: Use this skill when user asks to "configure hookify", "enable/disable hookify rules", "toggle hooks", or manage existing hookify rule settings.
+description: Hookify rule toggling — enable/disable existing `.local.md` rules interactively. Triggers on "configure hookify", "enable/disable hookify rules", "toggle hooks", manage rule settings.
 version: 0.1.0
 ---
 

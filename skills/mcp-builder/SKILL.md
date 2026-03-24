@@ -1,20 +1,14 @@
 ---
 name: MCP Builder
-description: This skill should be used when the user asks to "build an MCP server", "create an MCP server", "implement MCP tools", "develop MCP integration", "write an MCP server in Python", "write an MCP server in TypeScript/Node", or needs guidance on MCP server development, tool design, evaluation creation, or MCP best practices.
+description: "MCP server development: build, create, and test Model Context Protocol servers in TypeScript or Python. Tool design, input/output schemas, Zod/Pydantic validation, evaluations, stdio/HTTP transport, @modelcontextprotocol/sdk, FastMCP."
 version: 0.1.0
 ---
 
 # MCP Server Development Guide
 
-## Overview
+Build MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools.
 
-Create MCP (Model Context Protocol) servers that enable LLMs to interact with external services through well-designed tools. The quality of an MCP server is measured by how well it enables LLMs to accomplish real-world tasks.
-
-**Key deliverables:**
-- A working MCP server with well-designed tools
-- Clear tool descriptions, input schemas, and annotations
-- Evaluation suite to measure tool effectiveness
-- Documentation for setup and usage
+**Deliverables:** working MCP server with well-designed tools, clear tool descriptions/input schemas/annotations, evaluation suite, and setup documentation.
 
 ---
 

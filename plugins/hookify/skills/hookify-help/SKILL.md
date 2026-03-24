@@ -1,16 +1,16 @@
 ---
 name: Hookify Help
-description: Use this skill when user asks "how does hookify work", "hookify help", "how to use hookify", or needs documentation on the hookify plugin.
+description: Hookify documentation and usage guide — plugin architecture, rule syntax, event types, pattern examples, available skills. Triggers on "how does hookify work", "hookify help", "how to use hookify", hookify documentation.
 version: 0.1.0
 ---
 
 # Hookify Plugin Help
 
-Explain how the hookify plugin works and how to use it.
+Present the hookify plugin to the user: architecture, rule format, available skills, and getting started steps.
 
 ## Overview
 
-The hookify plugin makes it easy to create custom hooks that prevent unwanted behaviors. Instead of editing `hooks.json` files, users create simple markdown configuration files that define patterns to watch for.
+Hookify creates custom hooks that prevent unwanted behaviors via simple markdown configuration files instead of editing `hooks.json`.
 
 ## How It Works
 

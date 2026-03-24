@@ -1,6 +1,6 @@
 ---
 name: Hookify Create
-description: Use this skill when user asks to "create a hookify rule", "hookify this behavior", "add a hook to prevent", or describes unwanted behaviors to prevent with hooks.
+description: Hookify rule creation — analyze conversation for unwanted behaviors, generate `.local.md` rule files with regex patterns. Triggers on "create a hookify rule", "hookify this", "add a hook to prevent", "prevent behavior", or describing unwanted tool patterns.
 version: 0.1.0
 ---
 
@@ -12,7 +12,7 @@ Create hook rules to prevent problematic behaviors by analyzing the conversation
 
 ## Your Task
 
-You will help the user create hookify rules to prevent unwanted behaviors. Follow these steps:
+You will help the user create hookify rules to prevent unwanted behaviors.
 
 ### Step 1: Gather Behavior Information
 

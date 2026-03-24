@@ -1,12 +1,12 @@
 ---
 name: Create Plugin
-description: Use this skill when user asks to "create a plugin", "scaffold a new plugin", "build a plugin from scratch", or needs guided end-to-end plugin creation workflow for Copilot CLI.
+description: Copilot CLI plugin scaffolding and creation workflow. Covers requirements gathering, component planning, directory structure, implementation, validation, and testing. Use for new plugin projects or guided plugin development.
 version: 0.1.0
 ---
 
 # Plugin Creation Workflow
 
-Guide the user through creating a complete, high-quality Copilot CLI plugin from initial concept to tested implementation. Follow a systematic approach: understand requirements, design components, clarify details, implement following best practices, validate, and test.
+Create a complete, high-quality Copilot CLI plugin from initial concept to tested implementation. Follow a systematic approach: understand requirements, design components, clarify details, implement following best practices, validate, and test.
 
 ## Core Principles
 

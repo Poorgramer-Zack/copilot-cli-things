@@ -1,6 +1,6 @@
 ---
 name: Hookify List
-description: Use this skill when user asks to "list hookify rules", "show my hooks", "what hookify rules do I have", or wants to see all configured hookify rules.
+description: List and inspect all configured hookify rules — show status, event types, patterns, file paths. Triggers on "list hookify rules", "show my hooks", "what hookify rules do I have", view configured rules.
 version: 0.1.0
 ---
 

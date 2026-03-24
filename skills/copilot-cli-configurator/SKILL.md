@@ -1,15 +1,15 @@
 ---
 name: copilot-cli-configurator
-description: Expert guide for configuring and customizing GitHub Copilot CLI. Use this skill whenever the user wants to set up custom instructions, create skills, add hooks, configure MCP servers, create custom agents, build or install plugins, set up a plugin marketplace, build extensions with the Copilot SDK, or compare CLI customization features. Also use when users mention copilot-instructions.md, AGENTS.md, SKILL.md, hooks.json, .mcp.json, .agent.md, plugin.json, marketplace.json, extension.mjs, @github/copilot-sdk, joinSession, or any Copilot CLI configuration topic — even if they don't explicitly say "configure Copilot CLI."
+description: "GitHub Copilot CLI configuration and customization: custom instructions (copilot-instructions.md, AGENTS.md), skills (SKILL.md), hooks (hooks.json), MCP servers (.mcp.json), custom agents (.agent.md), plugins (plugin.json, marketplace.json), extensions (extension.mjs, @github/copilot-sdk, joinSession). Use when setting up, comparing, or debugging any Copilot CLI customization surface."
 ---
 
 # Copilot CLI Configurator
 
-An expert guide for configuring and customizing GitHub Copilot CLI. This skill covers every customization surface: custom instructions, skills, hooks, MCP servers, custom agents, and plugins.
+Configure and customize GitHub Copilot CLI across all customization surfaces: custom instructions, skills, hooks, MCP servers, custom agents, and plugins.
 
 ## Choosing the Right Customization
 
-Before diving into implementation, identify which customization fits the user's goal:
+Identify which customization fits the user's goal:
 
 | Goal | Use |
 |------|-----|

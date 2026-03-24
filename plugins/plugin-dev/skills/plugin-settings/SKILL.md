@@ -1,21 +1,17 @@
 ---
 name: Plugin Settings
-description: This skill should be used when the user asks about "plugin settings", "store plugin configuration", "user-configurable plugin", ".local.md files", "plugin state files", "read YAML frontmatter", "per-project plugin settings", or wants to make plugin behavior configurable. Documents the .github/plugin-name.local.md pattern for storing plugin-specific configuration with YAML frontmatter and markdown content.
+description: Plugin settings and state via .github/plugin-name.local.md: YAML frontmatter configuration, per-project settings, .local.md files, reading/writing plugin state from hooks and agents.
 version: 0.1.0
 ---
 
 # Plugin Settings Pattern for Copilot CLI Plugins
 
-## Overview
+Store per-project plugin configuration in `.github/plugin-name.local.md` using YAML frontmatter for structured settings and markdown body for prompts or context.
 
-Plugins can store user-configurable settings and state in `.github/plugin-name.local.md` files within the project directory. This pattern uses YAML frontmatter for structured configuration and markdown content for prompts or additional context.
-
-**Key characteristics:**
 - File location: `.github/plugin-name.local.md` in project root
 - Structure: YAML frontmatter + markdown body
-- Purpose: Per-project plugin configuration and state
-- Usage: Read from hooks, skills, and agents
-- Lifecycle: User-managed (not in git, should be in `.gitignore`)
+- Read from hooks, skills, and agents
+- User-managed, not in git (add to `.gitignore`)
 
 ## File Structure
 
