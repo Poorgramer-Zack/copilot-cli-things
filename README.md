@@ -10,6 +10,7 @@ Extensions are Node.js processes that add custom tools, hooks, and event-driven 
 |-----------|-------------|
 | [cron-task](extensions/cron-task/) | Schedule recurring tasks — shell commands or agent prompts on a timer |
 | [phase-router](extensions/phase-router/) | LLM-driven intent detection + intelligent model switching |
+| [fleet-worktree](extensions/fleet-worktree/) | Git worktree management for fleet mode — isolated branches per parallel task |
 
 ### Install an Extension
 
