@@ -298,21 +298,21 @@ const session = await joinSession({
 // Event listeners — broadcast to SSE clients after each state change
 // ---------------------------------------------------------------------------
 session.on("subagent.started", (event) => {
-  const id = event.data?.id || event.data?.agentId || `agent-${Date.now()}`;
+  const id = event.data?.toolCallId || `agent-${Date.now()}`;
   agents.set(id, {
-    name: event.data?.name || event.data?.agentName || id,
+    name: event.data?.agentDisplayName || event.data?.agentName || id,
     status: "running",
     startedAt: new Date().toISOString(),
     completedAt: null,
     toolCalls: 0,
     error: null,
-    description: event.data?.description || "",
+    description: event.data?.agentDescription || "",
   });
   broadcast();
 });
 
 session.on("subagent.completed", (event) => {
-  const id = event.data?.id || event.data?.agentId;
+  const id = event.data?.toolCallId;
   if (id && agents.has(id)) {
     const agent = agents.get(id);
     agent.status = "done";
@@ -322,7 +322,7 @@ session.on("subagent.completed", (event) => {
 });
 
 session.on("subagent.failed", (event) => {
-  const id = event.data?.id || event.data?.agentId;
+  const id = event.data?.toolCallId;
   if (id && agents.has(id)) {
     const agent = agents.get(id);
     agent.status = "failed";
@@ -362,7 +362,7 @@ session.on("assistant.message", () => { messageStats.assistant++; messageStats.t
 
 session.on("session.model_change", (event) => {
   const from = event.data?.previousModel || currentModel;
-  const to = event.data?.newModel || event.model || "unknown";
+  const to = event.data?.newModel || "unknown";
   modelChanges.push({ from, to, timestamp: new Date().toISOString() });
   currentModel = to;
   broadcast();

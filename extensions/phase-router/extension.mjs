@@ -198,5 +198,5 @@ const session = await joinSession({
 });
 
 session.on("session.model_change", (event) => {
-  session.log(`Phase Router: Model changed → ${event.model || "unknown"}`);
+  session.log(`Phase Router: Model changed → ${event.data?.newModel || "unknown"}`);
 });
