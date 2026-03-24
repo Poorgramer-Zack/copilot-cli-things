@@ -8,7 +8,6 @@ Extensions are Node.js processes that add custom tools, hooks, and event-driven 
 
 | Extension | Description |
 |-----------|-------------|
-| [copilot-kanban](extensions/copilot-kanban/) | Real-time session & fleet monitoring dashboard with web UI |
 | [cron-task](extensions/cron-task/) | Schedule recurring tasks — shell commands or agent prompts on a timer |
 | [phase-router](extensions/phase-router/) | LLM-driven intent detection + intelligent model switching |
 
