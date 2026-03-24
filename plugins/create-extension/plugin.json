@@ -1,0 +1,12 @@
+{
+  "name": "create-extension",
+  "description": "Build Copilot CLI extensions — extension.mjs, hooks, tools, events, SDK API, JSON-RPC lifecycle",
+  "version": "0.1.0",
+  "author": {
+    "name": "pgZack"
+  },
+  "license": "MIT",
+  "keywords": ["extension", "sdk", "tools", "hooks", "events"],
+  "category": "development",
+  "skills": "skills/"
+}

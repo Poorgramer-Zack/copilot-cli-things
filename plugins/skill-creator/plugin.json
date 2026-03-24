@@ -1,0 +1,12 @@
+{
+  "name": "skill-creator",
+  "description": "Skill development lifecycle — create, edit, test, benchmark, and optimize SKILL.md files with evals",
+  "version": "0.1.0",
+  "author": {
+    "name": "pgZack"
+  },
+  "license": "MIT",
+  "keywords": ["skill", "eval", "benchmark", "testing", "development"],
+  "category": "development",
+  "skills": "skills/"
+}

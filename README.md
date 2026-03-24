@@ -1,6 +1,6 @@
 # copilot-cli-things
 
-A curated collection of plugins and extensions for [GitHub Copilot CLI](https://docs.github.com/copilot/concepts/agents/about-copilot-cli).
+A curated collection of extensions, skills, and plugins for [GitHub Copilot CLI](https://docs.github.com/copilot/concepts/agents/about-copilot-cli).
 
 ## Extensions
 
@@ -25,21 +25,34 @@ cp -r extensions/<name> ~/.copilot/extensions/
 
 Restart Copilot CLI or run `/clear` to load.
 
+## Skills
+
+All skills are distributed as plugins via this marketplace.
+
 ## Plugins
 
 Plugins bundle agents, skills, hooks, and MCP configs into distributable packages.
 
+| Plugin | Category | Description |
+|--------|----------|-------------|
+| [hookify](plugins/hookify/) | safety | Markdown-based hook creation — regex patterns with warn/block actions |
+| [plugin-dev](plugins/plugin-dev/) | development | Plugin development toolkit — hooks, MCP, agents, settings, structure |
+| [copilot-cli-configurator](plugins/copilot-cli-configurator/) | configuration | Configure custom instructions, hooks, MCP servers, agents, plugins, extensions |
+| [create-extension](plugins/create-extension/) | development | Build extensions — SDK API, tools, hooks, events, JSON-RPC lifecycle |
+| [mcp-builder](plugins/mcp-builder/) | development | Build and test MCP servers in TypeScript or Python |
+| [skill-creator](plugins/skill-creator/) | development | Skill development lifecycle — create, test, benchmark, optimize |
+
 ### Install from This Marketplace
 
 ```bash
-# Register this marketplace
-copilot plugin marketplace add Poorgramer-Zack/copilot-cli-things
+# Register the marketplace
+copilot plugin marketplace add pgZack/copilot-cli-things
 
 # Browse available plugins
 copilot plugin marketplace browse copilot-cli-things
 
 # Install a plugin
-copilot plugin install <plugin-name>@copilot-cli-things
+copilot plugin install hookify@copilot-cli-things
 ```
 
 ## Contributing
@@ -53,8 +66,8 @@ copilot plugin install <plugin-name>@copilot-cli-things
 ### Add a Plugin
 
 1. Create a directory under `plugins/<name>/`
-2. Add `plugin.json` manifest and plugin components (agents, skills, hooks, etc.)
-3. Register it in `.github/plugin/marketplace.json`
+2. Add plugin components in conventionally named subdirectories (`agents/`, `skills/`, `hooks/`, `mcp/`, etc.)
+3. Add a `README.md` describing the plugin
 4. Submit a PR
 
 ## License

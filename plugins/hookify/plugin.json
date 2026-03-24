@@ -1,0 +1,14 @@
+{
+  "name": "hookify",
+  "description": "Create custom hooks from conversation analysis or explicit rules — lightweight markdown-based pattern matching with warn/block actions",
+  "version": "0.1.0",
+  "author": {
+    "name": "pgZack"
+  },
+  "license": "MIT",
+  "keywords": ["hooks", "guardrails", "patterns", "rules", "safety"],
+  "category": "safety",
+  "agents": "agents/",
+  "skills": "skills/",
+  "hooks": "hooks/hooks.json"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "plugin-dev",
+  "description": "Plugin development toolkit — 7 specialized skills covering hooks, MCP integration, agents, settings, structure, and distribution",
+  "version": "0.1.0",
+  "author": {
+    "name": "pgZack"
+  },
+  "license": "MIT",
+  "keywords": ["plugin", "development", "toolkit", "scaffold"],
+  "category": "development",
+  "agents": "agents/",
+  "skills": "skills/"
+}

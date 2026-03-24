@@ -1,0 +1,60 @@
+{
+  "name": "copilot-cli-things",
+  "owner": {
+    "name": "pgZack"
+  },
+  "metadata": {
+    "description": "Curated plugins and extensions for GitHub Copilot CLI",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "hookify",
+      "description": "Create custom hooks from conversation analysis or explicit rules — lightweight markdown-based pattern matching with warn/block actions",
+      "version": "0.1.0",
+      "source": "./plugins/hookify",
+      "keywords": ["hooks", "guardrails", "patterns", "rules"],
+      "category": "safety"
+    },
+    {
+      "name": "plugin-dev",
+      "description": "Plugin development toolkit — 7 specialized skills covering hooks, MCP integration, agents, settings, structure, and distribution",
+      "version": "0.1.0",
+      "source": "./plugins/plugin-dev",
+      "keywords": ["plugin", "development", "toolkit", "scaffold"],
+      "category": "development"
+    },
+    {
+      "name": "copilot-cli-configurator",
+      "description": "Configure Copilot CLI — custom instructions, hooks, MCP servers, custom agents, plugins, extensions, and loading order",
+      "version": "0.1.0",
+      "source": "./plugins/copilot-cli-configurator",
+      "keywords": ["config", "setup", "instructions", "hooks", "mcp", "agents"],
+      "category": "configuration"
+    },
+    {
+      "name": "create-extension",
+      "description": "Build Copilot CLI extensions — extension.mjs, hooks, tools, events, SDK API, JSON-RPC lifecycle",
+      "version": "0.1.0",
+      "source": "./plugins/create-extension",
+      "keywords": ["extension", "sdk", "tools", "hooks", "events"],
+      "category": "development"
+    },
+    {
+      "name": "mcp-builder",
+      "description": "Build and test MCP servers in TypeScript or Python — tool design, schemas, transports, evaluation",
+      "version": "0.1.0",
+      "source": "./plugins/mcp-builder",
+      "keywords": ["mcp", "server", "typescript", "python", "tools"],
+      "category": "development"
+    },
+    {
+      "name": "skill-creator",
+      "description": "Skill development lifecycle — create, edit, test, benchmark, and optimize SKILL.md files with evals",
+      "version": "0.1.0",
+      "source": "./plugins/skill-creator",
+      "keywords": ["skill", "eval", "benchmark", "testing", "development"],
+      "category": "development"
+    }
+  ]
+}

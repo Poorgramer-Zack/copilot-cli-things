@@ -1,0 +1,22 @@
+<evaluation>
+   <qa_pair>
+      <question>In the "octocat/hello-world" repository, find the oldest open issue that has the label "bug" and also has at least 3 comments. What is that issue's number?</question>
+      <answer>142</answer>
+   </qa_pair>
+   <qa_pair>
+      <question>Search for all open issues in "octocat/hello-world" that mention "timeout" in their body. Among those results, how many were opened by users who also have at least one other open issue assigned to them in the same repository?</question>
+      <answer>4</answer>
+   </qa_pair>
+   <qa_pair>
+      <question>Look at the 5 most recently closed issues in "octocat/hello-world" that carry both the "enhancement" and "v2" labels. For each, retrieve the full comment thread. How many of those 5 issues had their final comment written by someone other than the issue author?</question>
+      <answer>3</answer>
+   </qa_pair>
+   <qa_pair>
+      <question>In "octocat/hello-world", find the issue labeled "regression" whose title contains the word "deploy". Retrieve that issue's timeline and identify the SHA of the commit that was referenced in the earliest cross-reference event. What are the first 7 characters of that commit SHA?</question>
+      <answer>a3f8c91</answer>
+   </qa_pair>
+   <qa_pair>
+      <question>List all milestones in "octocat/hello-world" that have at least one open issue. For the milestone with the highest ratio of closed issues to total issues, what is the milestone's title?</question>
+      <answer>v1.2-stable</answer>
+   </qa_pair>
+</evaluation>
