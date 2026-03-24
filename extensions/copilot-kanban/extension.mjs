@@ -759,9 +759,65 @@ const session = await joinSession({
 const _port = await startServer();
 session.log(`📋 Copilot Kanban loaded. Dashboard: http://127.0.0.1:${_port}`);
 
+// Fetch initial model
+try {
+  const { modelId } = await session.rpc.model.getCurrent();
+  if (modelId) currentModel = modelId;
+} catch {}
+
 // ---------------------------------------------------------------------------
-// Event listeners — broadcast to SSE clients after each state change
+// Main agent tracking
 // ---------------------------------------------------------------------------
+const MAIN_AGENT_ID = "main-agent";
+let mainAgentTurnTools = 0;
+
+function ensureMainAgent() {
+  if (!agents.has(MAIN_AGENT_ID)) {
+    agents.set(MAIN_AGENT_ID, {
+      name: "Main Agent",
+      status: "running",
+      startedAt: new Date().toISOString(),
+      completedAt: null,
+      toolCalls: 0,
+      error: null,
+      description: "",
+    });
+  }
+}
+
+session.on("user.message", () => {
+  messageStats.user++;
+  ensureMainAgent();
+  const main = agents.get(MAIN_AGENT_ID);
+  main.status = "running";
+  main.completedAt = null;
+  mainAgentTurnTools = 0;
+  broadcast();
+});
+
+session.on("assistant.intent", (event) => {
+  ensureMainAgent();
+  const main = agents.get(MAIN_AGENT_ID);
+  main.description = event.data?.intent || "";
+  broadcast();
+});
+
+session.on("session.idle", () => {
+  if (agents.has(MAIN_AGENT_ID)) {
+    const main = agents.get(MAIN_AGENT_ID);
+    if (main.status === "running") {
+      main.status = "done";
+      main.completedAt = new Date().toISOString();
+    }
+  }
+  broadcast();
+});
+
+session.on("assistant.message", () => {
+  messageStats.assistant++;
+  messageStats.turns++;
+  broadcast();
+});
 session.on("subagent.started", (event) => {
   const id = event.data?.toolCallId || `agent-${Date.now()}`;
   agents.set(id, {
@@ -803,8 +859,12 @@ session.on("tool.execution_start", (event) => {
   const existing = toolStats.byName.get(name) || { count: 0, success: 0, failed: 0 };
   existing.count++;
   toolStats.byName.set(name, existing);
-  for (const agent of agents.values()) {
-    if (agent.status === "running") agent.toolCalls++;
+  // Attribute to main agent if no sub-agent is running
+  if (agents.has(MAIN_AGENT_ID) && agents.get(MAIN_AGENT_ID).status === "running") {
+    agents.get(MAIN_AGENT_ID).toolCalls++;
+  }
+  for (const [id, agent] of agents) {
+    if (id !== MAIN_AGENT_ID && agent.status === "running") agent.toolCalls++;
   }
   broadcast();
 });
@@ -822,15 +882,19 @@ session.on("tool.execution_complete", (event) => {
   broadcast();
 });
 
-session.on("user.message", () => { messageStats.user++; broadcast(); });
-session.on("assistant.message", () => { messageStats.assistant++; messageStats.turns++; broadcast(); });
-
 session.on("session.model_change", (event) => {
   const from = event.data?.previousModel || currentModel;
   const to = event.data?.newModel || "unknown";
   modelChanges.push({ from, to, timestamp: new Date().toISOString() });
   currentModel = to;
   broadcast();
+});
+
+session.on("assistant.usage", (event) => {
+  if (event.data?.model && currentModel !== event.data.model) {
+    currentModel = event.data.model;
+    broadcast();
+  }
 });
 
 session.on("session.error", (event) => {
