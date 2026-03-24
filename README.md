@@ -1,13 +1,14 @@
 # copilot-cli-things
 
-A curated collection of extensions, skills, and plugins for [GitHub Copilot CLI](https://docs.github.com/copilot/concepts/agents/about-copilot-cli).
+A curated collection of extensions, skills, and plugins for [GitHub Copilot CLI](https://github.com/github/copilot-cli).
 
 ## Extensions
 
 > **⚠️ Experimental** — Extensions are an experimental feature in Copilot CLI. You must enable them before use:
 >
 > ```bash
-> copilot config set extensions.enabled true
+> copilot --experimental
+> # or type /experimental inside a running session (persists across launches)
 > ```
 
 Extensions are Node.js processes that add custom tools, hooks, and event-driven behaviors to Copilot CLI via the `@github/copilot-sdk`.
