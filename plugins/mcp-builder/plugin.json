@@ -3,7 +3,7 @@
   "description": "Build and test MCP servers in TypeScript or Python — tool design, schemas, transports, evaluation",
   "version": "0.1.0",
   "author": {
-    "name": "pgZack"
+    "name": "Poorgramer-Zack"
   },
   "license": "MIT",
   "keywords": ["mcp", "server", "typescript", "python", "tools"],

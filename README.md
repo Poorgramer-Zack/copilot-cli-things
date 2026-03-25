@@ -54,7 +54,7 @@ Plugins bundle agents, skills, hooks, and MCP configs into distributable package
 
 ```bash
 # Register the marketplace
-copilot plugin marketplace add pgZack/copilot-cli-things
+copilot plugin marketplace add Poorgramer-Zack/copilot-cli-things
 
 # Browse available plugins
 copilot plugin marketplace browse copilot-cli-things

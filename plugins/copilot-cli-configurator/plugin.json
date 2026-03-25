@@ -3,7 +3,7 @@
   "description": "Configure Copilot CLI — custom instructions, hooks, MCP servers, custom agents, plugins, extensions, and loading order",
   "version": "0.1.0",
   "author": {
-    "name": "pgZack"
+    "name": "Poorgramer-Zack"
   },
   "license": "MIT",
   "keywords": ["config", "setup", "instructions", "hooks", "mcp", "agents"],
